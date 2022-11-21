@@ -11,7 +11,7 @@ struct APIResponse: Codable {
     let lat: Float
     let lon: Float
     let current: Current
-    let hourly: String
+    let hourly: [HourModel]
     let daily: [DayModel]
     
 }

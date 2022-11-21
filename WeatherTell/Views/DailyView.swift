@@ -15,8 +15,8 @@ struct DailyView: View {
     var body: some View {
         VStack {
             // viewModel.dailyData
-            ForEach(1...7, id: \.self) {num in
-                DayRowView(model: DayData())
+            ForEach(viewModel.dailyData) { model in
+                DayRowView(model: model)
                     .padding()
             }
         }

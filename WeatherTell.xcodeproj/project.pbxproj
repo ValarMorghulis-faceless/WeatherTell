@@ -16,6 +16,8 @@
 		0F400E17292541EE0057B75B /* HourlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F400E16292541EE0057B75B /* HourlyView.swift */; };
 		0F400E192925449F0057B75B /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F400E182925449F0057B75B /* DailyView.swift */; };
 		0FE99172292BE6CD00AEF36A /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE99171292BE6CD00AEF36A /* APIModels.swift */; };
+		0FE99174292BEBE400AEF36A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE99173292BEBE400AEF36A /* Extensions.swift */; };
+		0FE99179292C34C300AEF36A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE99178292C34C300AEF36A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		0F400E16292541EE0057B75B /* HourlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyView.swift; sourceTree = "<group>"; };
 		0F400E182925449F0057B75B /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
 		0FE99171292BE6CD00AEF36A /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		0FE99173292BEBE400AEF36A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0FE99178292C34C300AEF36A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				0F400E02292539D30057B75B /* WeatherTellApp.swift */,
 				0F400E06292539D40057B75B /* Assets.xcassets */,
 				0F400E08292539D40057B75B /* Preview Content */,
+				0FE99173292BEBE400AEF36A /* Extensions.swift */,
+				0FE99178292C34C300AEF36A /* LocationManager.swift */,
 			);
 			path = WeatherTell;
 			sourceTree = "<group>";
@@ -114,6 +120,8 @@
 			dependencies = (
 			);
 			name = WeatherTell;
+			packageProductDependencies = (
+			);
 			productName = WeatherTell;
 			productReference = 0F400DFF292539D30057B75B /* WeatherTell.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 0F400DF6292539D30057B75B;
+			packageReferences = (
+				0FE99175292BFB0400AEF36A /* XCRemoteSwiftPackageReference "SwURL" */,
+			);
 			productRefGroup = 0F400E00292539D30057B75B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,10 +182,12 @@
 				0F400E192925449F0057B75B /* DailyView.swift in Sources */,
 				0F400E17292541EE0057B75B /* HourlyView.swift in Sources */,
 				0F400E1229253D680057B75B /* Models.swift in Sources */,
+				0FE99174292BEBE400AEF36A /* Extensions.swift in Sources */,
 				0FE99172292BE6CD00AEF36A /* APIModels.swift in Sources */,
 				0F400E05292539D30057B75B /* ContentView.swift in Sources */,
 				0F400E03292539D30057B75B /* WeatherTellApp.swift in Sources */,
 				0F400E1529253DBC0057B75B /* HeaderView.swift in Sources */,
+				0FE99179292C34C300AEF36A /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,11 +319,13 @@
 				DEVELOPMENT_TEAM = MK4UBWJ2G8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to get your current location weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,11 +350,13 @@
 				DEVELOPMENT_TEAM = MK4UBWJ2G8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to get your current location weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +392,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FE99175292BFB0400AEF36A /* XCRemoteSwiftPackageReference "SwURL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cmtrounce/SwURL.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0F400DF7292539D30057B75B /* Project object */;
 }

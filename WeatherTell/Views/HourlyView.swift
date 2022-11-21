@@ -18,9 +18,9 @@ struct HourlyView: View {
             HStack {
                 //viewModel.hourlyData
                 
-                ForEach(0...24, id: \.self) {num in
+                ForEach(viewModel.hourlyData) {model in
                     
-                    HourView(model: HourData())
+                    HourView(model: model)
                 }
                 
             }
@@ -34,11 +34,16 @@ struct HourView: View {
     var body: some View {
         VStack {
             // image, temp, hour
-            Image(systemName: model.imageURL)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35, alignment: .center)
+                       
+            AsyncImage(url: URL(string: model.imageURL)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 35, height: 35)
+
+
+               // .frame(width: 35, height: 35)
             Text(model.temp)
                 .bold()
                 .foregroundColor(.white)

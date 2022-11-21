@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct HeaderView: View {
     @EnvironmentObject var viewModel: WeatherViewModel
+    
     var body: some View {
         VStack(spacing: -15) {
             Text(viewModel.headerViewModel.location)
@@ -17,11 +19,10 @@ struct HeaderView: View {
                 .font(.system(size: 36))
                 .padding()
             
-            Image(systemName: "cloud.sun.fill")
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150, alignment: .center)
+            AsyncImage(url: URL(string: viewModel.headerViewModel.iconURLString))
+                .frame(width: 150, height: 150)
+            
+            
             
             Text(viewModel.headerViewModel.currentTemp)
                 .bold()
