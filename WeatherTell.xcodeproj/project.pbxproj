@@ -15,6 +15,7 @@
 		0F400E1529253DBC0057B75B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F400E1429253DBC0057B75B /* HeaderView.swift */; };
 		0F400E17292541EE0057B75B /* HourlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F400E16292541EE0057B75B /* HourlyView.swift */; };
 		0F400E192925449F0057B75B /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F400E182925449F0057B75B /* DailyView.swift */; };
+		0FE99172292BE6CD00AEF36A /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE99171292BE6CD00AEF36A /* APIModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0F400E1429253DBC0057B75B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0F400E16292541EE0057B75B /* HourlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyView.swift; sourceTree = "<group>"; };
 		0F400E182925449F0057B75B /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
+		0FE99171292BE6CD00AEF36A /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0F400E1129253D680057B75B /* Models.swift */,
+				0FE99171292BE6CD00AEF36A /* APIModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				0F400E192925449F0057B75B /* DailyView.swift in Sources */,
 				0F400E17292541EE0057B75B /* HourlyView.swift in Sources */,
 				0F400E1229253D680057B75B /* Models.swift in Sources */,
+				0FE99172292BE6CD00AEF36A /* APIModels.swift in Sources */,
 				0F400E05292539D30057B75B /* ContentView.swift in Sources */,
 				0F400E03292539D30057B75B /* WeatherTellApp.swift in Sources */,
 				0F400E1529253DBC0057B75B /* HeaderView.swift in Sources */,

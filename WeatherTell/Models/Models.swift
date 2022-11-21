@@ -18,7 +18,7 @@ class WeatherViewModel: ObservableObject {
     }
     
     func fetchData() {
-        let urlString = "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=minutely&unit=imperial&appid=f14cf1d56cea710913063663e6c937e7"
+        let urlString = "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=minutely&units=imperial&appid=f14cf1d56cea710913063663e6c937e7"
         guard let url = URL(string: urlString) else {
             return
         }
@@ -26,6 +26,16 @@ class WeatherViewModel: ObservableObject {
             guard let data = data, error == nil else {
                 return
             }
+            let result: APIResponse?
+            do {
+                result = try JSONDecoder().decode(APIResponse.self, from: data)
+                print(result ?? "no data")
+                return
+            }
+            catch {
+                print(error)
+            }
+            
         }
         task.resume()
         
